@@ -28,12 +28,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowLeft
 import androidx.compose.material.icons.rounded.Favorite
 import androidx.compose.material.icons.rounded.FavoriteBorder
-import androidx.compose.material.icons.rounded.Shop
 import androidx.compose.material.icons.rounded.ShoppingCart
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -55,12 +53,10 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.DefaultShadowColor
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import kotlinx.coroutines.delay
-import me.ibrahim.composepractice.R
 import me.ibrahim.composepractice.shoes_app_ui.components.ProductColorList
 import me.ibrahim.composepractice.shoes_app_ui.components.ProductSizeList
 import me.ibrahim.composepractice.shoes_app_ui.models.Product
@@ -133,7 +129,7 @@ fun ProductDetailScreen(
             )
 
             IconButton(
-                onClick = { /*TODO*/ }, modifier = Modifier
+                onClick = {  }, modifier = Modifier
                     .padding(8.dp)
                     .shadow(
                         elevation = 24.dp, shape = CircleShape, spotColor = DefaultShadowColor
@@ -199,7 +195,7 @@ fun ProductDetailScreen(
                         .padding(top = 12.dp)
                 )
 
-                ProductSizeList(product) {}
+                ProductSizeList(product)
 
                 Text(
                     text = "Colors", style = MaterialTheme.typography.labelLarge.copy(color = Color.Black),

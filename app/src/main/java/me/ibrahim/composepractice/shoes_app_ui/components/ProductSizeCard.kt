@@ -15,7 +15,6 @@ import me.ibrahim.composepractice.shoes_app_ui.models.Product
 
 @Composable
 fun ProductSizeCard(
-    modifier: Modifier = Modifier,
     product: Product,
     size: Int,
     selected: Boolean,

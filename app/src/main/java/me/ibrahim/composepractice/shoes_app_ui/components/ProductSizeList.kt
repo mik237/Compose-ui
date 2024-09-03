@@ -15,7 +15,7 @@ import me.ibrahim.composepractice.shoes_app_ui.models.Product
 
 
 @Composable
-fun ProductSizeList(product: Product, onChange: (Int) -> Unit) {
+fun ProductSizeList(product: Product) {
     var selectedSize by remember { mutableStateOf(product.size) }
     Row(
         modifier = Modifier

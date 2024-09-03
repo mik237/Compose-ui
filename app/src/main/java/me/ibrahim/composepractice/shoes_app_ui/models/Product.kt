@@ -1,6 +1,5 @@
 package me.ibrahim.composepractice.shoes_app_ui.models
 
-import android.media.Image
 import androidx.annotation.DrawableRes
 import androidx.compose.ui.graphics.Color
 
