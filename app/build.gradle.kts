@@ -64,7 +64,10 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation (libs.androidx.material.icons.extended)
-    implementation("io.github.bytebeats:compose-charts:0.2.1")
+    implementation(libs.androidx.material.icons.extended)
+    implementation(libs.compose.charts)
 
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    implementation(libs.androidx.navigation.compose)
 }
