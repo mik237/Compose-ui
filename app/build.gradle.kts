@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -6,6 +9,11 @@ plugins {
 android {
     namespace = "me.ibrahim.composepractice"
     compileSdk = 34
+
+    buildFeatures.buildConfig = true
+
+    val properties = Properties()
+    properties.load(FileInputStream(project.rootProject.file("local.properties")))
 
     defaultConfig {
         applicationId = "me.ibrahim.composepractice"
@@ -18,6 +26,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        buildConfigField("String", "GRAVATAR_API_KEY", "\"${properties["gravatar.api.key"]}\"")
     }
 
     buildTypes {
@@ -65,6 +75,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation (libs.androidx.material.icons.extended)
-    implementation("io.github.bytebeats:compose-charts:0.2.1")
+    implementation(libs.compose.charts)
 
+    //coil - image loading
+    implementation(libs.coil.compose)
 }

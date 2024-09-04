@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ComposePractice</string>
+    <string name="description">async image gravatar</string>
 </resources>
