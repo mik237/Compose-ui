@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ComposePractice</string>
     <string name="description">async image gravatar</string>
+    <string name="str_compare">StringToCompare</string>
 </resources>

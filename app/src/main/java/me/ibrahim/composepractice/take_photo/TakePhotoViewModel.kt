@@ -1,4 +1,6 @@
 package me.ibrahim.composepractice.take_photo
 
-class TakePhotoViewModel {
+import androidx.lifecycle.ViewModel
+
+class TakePhotoViewModel : ViewModel() {
 }
