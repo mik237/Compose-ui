@@ -4,9 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.ui.Modifier
-import me.ibrahim.composepractice.take_photo.TakePhotoScreen
-import me.ibrahim.composepractice.top_app_bar.TopBarScreen
+import me.ibrahim.composepractice.list_detail_pane.ListDetailLayout
 import me.ibrahim.composepractice.ui.theme.ComposePracticeTheme
 
 class MainActivity : ComponentActivity() {
@@ -15,6 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposePracticeTheme {
+                ListDetailLayout()
 //                    TopBarScreen(modifier = Modifier)
 //                SideEffects()
 //                GravatarProfileSummary()

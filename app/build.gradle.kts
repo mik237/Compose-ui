@@ -33,8 +33,30 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isDebuggable = false
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+
+        debug {
+            isDebuggable = false
+        }
+
+    }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("free") {
+            dimension = "version"
+            applicationIdSuffix = ".free"
+            versionNameSuffix = "-free"
+
+        }
+        create("paid") {
+            applicationIdSuffix = ".paid"
+            versionNameSuffix = "-paid"
+            dimension = "version"
         }
     }
     compileOptions {
@@ -67,6 +89,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.adaptive.layout.android)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -108,4 +131,8 @@ dependencies {
     //Retrofit 2 & gson convertor
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+
+    implementation("androidx.compose.material3.adaptive:adaptive")
+    implementation("androidx.compose.material3.adaptive:adaptive-layout")
+    implementation("androidx.compose.material3.adaptive:adaptive-navigation")
 }
