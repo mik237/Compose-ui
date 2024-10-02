@@ -52,6 +52,25 @@ class WalletAppActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun WalletAppUI() {
+    ComposePracticeTheme {
+        val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior(state = rememberTopAppBarState())
+        Scaffold(
+            topBar = {
+                TopBar(modifier = Modifier, scrollBehavior = scrollBehavior)
+            }, modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection)
+        ) {
+            MainScreen(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(it)
+            )
+        }
+    }
+}
+
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
     Column(modifier = modifier.verticalScroll(rememberScrollState())) {

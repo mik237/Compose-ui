@@ -43,5 +43,14 @@ fun MainRoutesList(navController: NavHostController) {
         ) {
             Text(text = "Shoes App UI")
         }
+
+        Spacer(modifier = Modifier.height(10.dp))
+
+        OutlinedButton(
+            onClick = { navController.navigate(Routes.WalletAppRoute) },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(text = "Wallet App UI")
+        }
     }
 }
