@@ -18,6 +18,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -26,6 +27,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import me.ibrahim.composepractice.LocalMyName
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -156,10 +158,12 @@ fun ScreenContent(padding: PaddingValues) {
                     ),
                 contentAlignment = Alignment.Center
             ) {
-                Text(
-                    text = themeData.text,
-                    style = themeData.style,
-                )
+                CompositionLocalProvider(LocalMyName provides "Ibrahim") {
+                    Text(
+                        text = LocalMyName.current,
+                        style = themeData.style,
+                    )
+                }
             }
             Spacer(modifier = Modifier.height(16.dp))
         }

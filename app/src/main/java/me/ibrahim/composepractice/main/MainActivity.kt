@@ -1,10 +1,12 @@
-package me.ibrahim.composepractice
+package me.ibrahim.composepractice.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import me.ibrahim.composepractice.shoes_app_ui.navigation.ShopNavHost
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.ui.Modifier
 import me.ibrahim.composepractice.ui.theme.ComposePracticeTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,10 +15,14 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposePracticeTheme {
-//                    TopBarScreen(modifier = Modifier)
-//                ProductsScreen(modifier = Modifier)
+                Scaffold {
+                    MainNavGraph(modifier = Modifier.padding(it))
+                }
 
-                ShopNavHost()
+//                    TopBarScreen(modifier = Modifier)
+//                SideEffects()
+//                GravatarProfileSummary()
+//                TakePhotoScreen()
             }
         }
     }

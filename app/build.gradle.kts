@@ -1,11 +1,20 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
     namespace = "me.ibrahim.composepractice"
     compileSdk = 34
+
+    buildFeatures.buildConfig = true
+
+    val properties = Properties()
+    properties.load(FileInputStream(project.rootProject.file("local.properties")))
 
     defaultConfig {
         applicationId = "me.ibrahim.composepractice"
@@ -18,12 +27,36 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        buildConfigField("String", "GR_AVATAR", "\"${project.properties["GRAVATAR_API_KEY"]}\"")
+        buildConfigField("String", "GRAVATAR_API_KEY", "\"${properties["gravatar.api.key"]}\"")
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isDebuggable = false
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+
+        debug {
+            isDebuggable = false
+        }
+
+    }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("free") {
+            dimension = "version"
+            applicationIdSuffix = ".free"
+            versionNameSuffix = "-free"
+
+        }
+        create("paid") {
+            applicationIdSuffix = ".paid"
+            versionNameSuffix = "-paid"
+            dimension = "version"
         }
     }
     compileOptions {
@@ -56,7 +89,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    testImplementation(libs.junit)
+    implementation(libs.androidx.adaptive.layout.android)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -70,4 +103,36 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     implementation(libs.androidx.navigation.compose)
+
+    //coil - image loading
+    implementation(libs.coil.compose)
+
+
+    //junit
+    testImplementation(libs.junit)
+    //truth assertion library for assertion
+    testImplementation(libs.truth)
+    androidTestImplementation(libs.truth)
+
+
+    // Room components
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)           // For annotation processing (Kotlin)
+
+    // Optional - Kotlin Extensions and Coroutines support for Room
+    implementation(libs.androidx.room.ktx)
+
+    // Optional - Test helpers
+    // For LiveData testing
+    testImplementation(libs.androidx.core.testing)
+    androidTestImplementation(libs.androidx.core.testing)
+//    testImplementation("androidx.room:room-testing:2.6.1")
+
+    //Retrofit 2 & gson convertor
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    implementation("androidx.compose.material3.adaptive:adaptive")
+    implementation("androidx.compose.material3.adaptive:adaptive-layout")
+    implementation("androidx.compose.material3.adaptive:adaptive-navigation")
 }
