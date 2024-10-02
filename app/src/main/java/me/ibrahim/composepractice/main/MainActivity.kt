@@ -18,11 +18,6 @@ class MainActivity : ComponentActivity() {
                 Scaffold {
                     MainNavGraph(modifier = Modifier.padding(it))
                 }
-
-//                    TopBarScreen(modifier = Modifier)
-//                SideEffects()
-//                GravatarProfileSummary()
-//                TakePhotoScreen()
             }
         }
     }

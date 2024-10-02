@@ -4,4 +4,6 @@ package me.ibrahim.composepractice.main
 object Routes {
     const val RoutesList = "routesList"
     const val ListDetailRoute = "listDetailRoute"
+    const val ShoesAppRoute = "shoesAppRoute"
+    const val WalletAppRoute = "walletAppRoute"
 }
