@@ -2,8 +2,10 @@ package me.ibrahim.composepractice.main
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -31,6 +33,15 @@ fun MainRoutesList(navController: NavHostController) {
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(text = "List/Detail Pane")
+        }
+
+        Spacer(modifier = Modifier.height(10.dp))
+
+        OutlinedButton(
+            onClick = { navController.navigate(Routes.ShoesAppRoute) },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(text = "Shoes App UI")
         }
     }
 }

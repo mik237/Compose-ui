@@ -6,6 +6,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import me.ibrahim.composepractice.list_detail_pane.ListDetailLayout
+import me.ibrahim.composepractice.shoes_app_ui.navigation.ShopNavHost
+import me.ibrahim.composepractice.wallet_app_ui.WalletAppActivity
 
 @Composable
 fun MainNavGraph(modifier: Modifier = Modifier) {
@@ -22,6 +24,14 @@ fun MainNavGraph(modifier: Modifier = Modifier) {
 
         composable(route = Routes.ListDetailRoute) {
             ListDetailLayout()
+        }
+
+        composable(route = Routes.ShoesAppRoute) {
+            ShopNavHost()
+        }
+
+        composable(route = Routes.WalletAppRoute) {
+            WalletAppActivity()
         }
     }
 }
