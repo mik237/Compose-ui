@@ -6,4 +6,5 @@ object Routes {
     const val ListDetailRoute = "listDetailRoute"
     const val ShoesAppRoute = "shoesAppRoute"
     const val WalletAppRoute = "walletAppRoute"
+    const val DashboardIntro = "dashboardIntro"
 }

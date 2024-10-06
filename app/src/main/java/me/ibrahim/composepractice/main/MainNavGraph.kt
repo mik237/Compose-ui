@@ -5,6 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import me.ibrahim.composepractice.dashboard_intro_ui.IntroScreen
 import me.ibrahim.composepractice.list_detail_pane.ListDetailLayout
 import me.ibrahim.composepractice.shoes_app_ui.navigation.ShopNavHost
 import me.ibrahim.composepractice.wallet_app_ui.WalletAppUI
@@ -32,6 +33,10 @@ fun MainNavGraph(modifier: Modifier = Modifier) {
 
         composable(route = Routes.WalletAppRoute) {
             WalletAppUI()
+        }
+
+        composable(route = Routes.DashboardIntro) {
+            IntroScreen()
         }
     }
 }

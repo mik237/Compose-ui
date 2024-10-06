@@ -30,6 +30,22 @@ fun MainRoutesList(navController: NavHostController) {
             .padding(22.dp)
             .verticalScroll(rememberScrollState())
     ) {
+
+        OutlinedButton(
+            onClick = { navController.navigate(Routes.DashboardIntro) },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(52.dp)
+        ) {
+            Text(
+                text = "Intro Dashboard",
+                color = MaterialTheme.colorScheme.primary,
+                fontSize = 20.sp
+            )
+        }
+
+        Spacer(modifier = Modifier.height(10.dp))
+
         OutlinedButton(
             onClick = { navController.navigate(Routes.ListDetailRoute) },
             modifier = Modifier
