@@ -91,6 +91,9 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.adaptive.layout.android)
     implementation( libs.androidx.constraintlayout.compose)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -132,7 +135,7 @@ dependencies {
     //Retrofit 2 & gson convertor
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
-
+    implementation("androidx.compose.material:material:1.7.3")
     implementation("androidx.compose.material3.adaptive:adaptive")
     implementation("androidx.compose.material3.adaptive:adaptive-layout")
     implementation("androidx.compose.material3.adaptive:adaptive-navigation")

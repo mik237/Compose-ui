@@ -1,7 +1,8 @@
 package me.ibrahim.composepractice.dashboard_intro_ui
 
+import android.content.Intent
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -9,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -22,6 +24,7 @@ import me.ibrahim.composepractice.R
 @Preview(showBackground = true)
 @Composable
 fun IntroScreen() {
+    val context = LocalContext.current
     ConstraintLayout(
         modifier = Modifier
             .fillMaxSize()
@@ -77,6 +80,10 @@ fun IntroScreen() {
             modifier = Modifier
                 .padding(top = 0.dp)
                 .size(120.dp)
+                .clickable {
+                    val intent = Intent(context, DashboardActivity::class.java)
+                    context.startActivity(intent)
+                }
                 .constrainAs(today) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
