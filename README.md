@@ -13,7 +13,7 @@ Each package in this project focuses on a different UI concept, enabling the dev
 
 ## Packages Overview
 
-### 1. `shoes_app_ui`
+### 1. `Shoes App UI`
 
 This package simulates a **Shoes Shopping App** UI. It consists of a product grid to display shoes and a product detail screen.
 
@@ -22,18 +22,25 @@ This package simulates a **Shoes Shopping App** UI. It consists of a product gri
     - Detailed product screen with more information.
 
 #### Screenshots:
-<img src="media/shoes_1.png" width="23%"/>      <img src="media/shoes_2.png" width="23%"/>      <img src="media/shoes_3.png" width="23%"/>
 
-<img src="media/shoes_4.png" width="23%"/>      <img src="media/shoes_5.png" width="23%"/>      <img src="media/shoes_6.png" width="23%"/>
+<img src="media/shoes_1.png" width="30%"/>  &nbsp; &nbsp; <img src="media/shoes_2.png" width="30%"/>&nbsp; &nbsp; <img src="media/shoes_3.png" width="30%"/>
 
+<img src="media/shoes_4.png" width="30%"/>    &nbsp; &nbsp;   <img src="media/shoes_5.png" width="30%"/>  &nbsp; &nbsp;     <img src="media/shoes_6.png" width="30%"/>
 
 
 ---
 
-### 2. `dashboard_intro_ui`
+### 2. `Dashboard Intro UI`
 
 #### Screenshots:
-<img src="media/dashboard_ui_1.png" width="23%"/>      <img src="media/dashboard_ui_2.png" width="23%"/>
+<img src="media/dashboard_ui_1.png" width="30%"/>  &nbsp; &nbsp;     <img src="media/dashboard_ui_2.png" width="30%"/>
+
+---
+
+### 3. `Wallet App UI`
+
+#### Screenshots:
+<img src="media/wallet_1.png" width="30%"/>  &nbsp; &nbsp;     <img src="media/wallet_2.png" width="30%"/>&nbsp; &nbsp;     <img src="media/wallet_3.png" width="30%"/>
 
 ---
 
