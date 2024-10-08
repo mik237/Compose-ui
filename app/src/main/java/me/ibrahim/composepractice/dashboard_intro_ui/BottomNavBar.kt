@@ -30,7 +30,7 @@ fun BottomNavBar() {
 
     NavigationBar(
         modifier = Modifier.fillMaxWidth(),
-        containerColor = Color.White,
+        containerColor = Color.Blue.copy(alpha = 0.05f),
     ) {
         bottomMenuListItem.forEachIndexed { index, bottomMenuItem ->
             if (index == 2) {
