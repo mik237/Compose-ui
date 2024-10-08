@@ -27,7 +27,6 @@ fun FeatureBoxUI(modifier: Modifier, bgColor: Color, title: String, painter: Pai
     Box(
         modifier = modifier
             .height(170.dp)
-            .padding(10.dp)
             .clip(RoundedCornerShape(10.dp))
             .background(bgColor),
         contentAlignment = Alignment.Center

@@ -22,6 +22,7 @@ import me.ibrahim.composepractice.R
 fun DashboardScreen() {
 
     Scaffold(
+        containerColor = Color.White,
         bottomBar = { BottomNavBar() },
         floatingActionButton = {
             Box {
