@@ -21,17 +21,18 @@
             android:exported="false" />
         <activity
             android:name=".dashboard_intro_ui.IntroActivity"
-            android:exported="true">
+            android:exported="true"/>
+
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ComposePractice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".main.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.ComposePractice" />
     </application>
 
 </manifest>

@@ -15,9 +15,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposePracticeTheme {
-                Scaffold {
-                    MainNavGraph(modifier = Modifier.padding(it))
-                }
+
+                    MainNavGraph()
+
             }
         }
     }
