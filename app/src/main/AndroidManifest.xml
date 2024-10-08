@@ -17,15 +17,21 @@
         android:theme="@style/Theme.ComposePractice"
         tools:targetApi="31">
         <activity
-            android:name=".main.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.ComposePractice">
+            android:name=".dashboard_intro_ui.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard_intro_ui.IntroActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ComposePractice" />
     </application>
 
 </manifest>
